@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient( 0deg, rgb(0, 0, 0), rgb(13, 137, 165), rgb(0, 0, 0));
+}
+.box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+
+    height: 500px;
+    width: 350px;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-image: linear-gradient( 110deg,transparent,transparent,rgb(42, 255, 98));
+    animation: border 2s  .5s infinite ease-in-out ;
+    
+}
+.box::after{
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-image: linear-gradient( 110deg,rgb(51, 218, 255),transparent,transparent);
+    animation: border 2s  infinite ease-in-out;
+}
+@keyframes border{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+main{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    inset:2.5px;
+    border-radius: 20px;
+    z-index: 2;
+}
+main h1{
+    color: rgb(77, 255, 204);
+    font-style: italic;
+    text-align: center;
+    padding-top: 20px;
+    font-family: arial, Geneva, Tahoma, sans-serif;
+
+}
+main p{
+    color: white;
+    margin-left: 22%;
+    margin-top: 9%;
+}
+img{
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+img.sfoto{
+    margin-left: 20px;
+    border-radius: 50%;
+    
+}
+main > p > a{
+    cursor: pointer;
+}
+footer >p {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-0%, -0%);
+  color: rgb(20, 255, 177);
+  font-style: italic;
+  font-size: 11px;
+  
+}
